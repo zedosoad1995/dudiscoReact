@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from "./components/Hero";
+import { useState } from 'react'
 
 function App() {
+
+  let [heroImgs, setHeroImgs] = useState([
+    {id: 1, name: 'im1.jpg'}, 
+    {id: 2, name: 'im2.jpg'}, 
+    {id: 3, name: 'im3.jpg'}, 
+  ])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hero heroImgs={heroImgs}/>
     </div>
   );
 }
+
 
 export default App;
